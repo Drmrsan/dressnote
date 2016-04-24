@@ -1,0 +1,162 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "semantic-ui";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300);
+
+$white			: #ffffff;
+$black			: #000000;
+$light_green	: #1b998b;
+$coral			: #e84855;
+$dark_blue		: #23282e;
+
+html, body{
+	font-family: "Raleway", sans-serif;
+}
+
+#header {
+	position: relative;
+	overflow: hidden;
+}
+
+.ui.menu{
+	border:none;
+	bow-shadow: 0px 0px 0px 0 rgba(34, 36, 38, 0.15);;
+	border-radius: 0;
+	font-family: "Raleway";
+	background: rgba(45, 48, 71, .8);
+	height: 80px;
+	padding:0 120px 0 120px;
+}
+
+.ui.menu .item:before{
+	background: none;
+}
+
+.logo{
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: $white;
+	text-decoration: underline;
+}
+
+span.logo_letter{
+	color: $light_green;
+}
+
+.ui.menu:not(.vertical) .item > .button {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.ui.login.button{
+	font-family: 'Raleway';
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background: $white;
+	color: $light_green;
+	&:hover{
+		background: $light_green;
+		color: $white;
+	}
+}
+
+.ui.signup.button{
+    font-family: 'Raleway';
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: $light_green;
+    color: $white;
+	&:hover{
+		background: $white;
+		color: $light_green;
+	}
+}
+
+.header-image img{
+	position:absolute;
+	top:0;
+	width: 100%;
+	height: auto;
+/*	min-height: 1000px;
+*/	z-index: -1;
+}
+
+h1.ui.header{
+	padding: 6em 0em;
+	font-size: 4rem;
+	font-family: 'Raleway';
+	font-weight: 700;
+	color: $white;
+}
+
+#logoHeader.logoSection{
+	background: $coral;
+	width:100%;
+	clear: both;
+	padding: 15px 0 15px 0;
+}
+
+.ui.center.aligned.header .logo {
+	text-decoration: none;
+}
+
+#about.middleSection{
+	width: 100%;
+	background: $white;
+	padding: 100px 0 100px 0;
+	h2,p{
+		color: $dark_blue;
+	}
+}
+
+h2.ui.center.aligned.header{
+	margin-bottom: 50px;
+}
+
+.ui.centered.grid > .column:not(.aligned):not(.row), .ui.centered.grid > .row > .column:not(.aligned), .ui.grid .centered.row > .column:not(.aligned){
+	text-align: center;
+}
+
+footer.footer{
+	background: $dark_blue;
+	color: $white;
+	padding: 100px 0 100px 0;
+	h2{
+		font-family: 'Raleway';
+		font-weight: 500;
+	}
+}
+
+i.large.icon, i.large.icons{
+	color: $white;
+}
+
+i.facebook.large.icon:hover{
+	color:#3A5A98;
+}
+
+i.twitter.large.icon:hover{
+	color:#55ACEE;
+}
+
+i.google.plus.large.icon:hover{
+	color:#DD4C3B;
+}
