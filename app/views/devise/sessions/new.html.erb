@@ -1,0 +1,41 @@
+<div class="ui middle aligned center aligned grid">
+  <div id="signup" class="column">
+    <form class="ui large form">
+      <h2 class="ui teal header">Log in</h2>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          
+          <div class="ui stacked segment">
+            <div class="ui field">
+              <div class="ui left icon input">
+                <i class="user icon"></i>
+                <%= f.email_field :email, autofocus: true, placeholder:"Email" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="user icon"></i>
+                <%= f.password_field :password, autocomplete: "off", placeholder: "Password (minimum 6 characters)" %>
+              </div>
+            </div>
+
+            <div class="ui checkbox">  
+              <% if devise_mapping.rememberable? -%>
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me %>
+              <% end -%>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Log in", class: "ui fluid large teal submit button" %>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="ui message">
+         <%= render "devise/shared/links" %>
+        </div>
+      </form>
+    </div>
+  </div>

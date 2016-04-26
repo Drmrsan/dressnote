@@ -25,11 +25,18 @@ $dark_blue		: #23282e;
 
 html, body{
 	font-family: "Raleway", sans-serif;
+	background-color: #dadada;
 }
 
 #header {
-	position: relative;
-	overflow: hidden;
+	margin:0;
+	background: url(header-image.jpg) center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
 }
 
 .ui.menu{
@@ -50,7 +57,7 @@ html, body{
 	font-size: 2.5rem;
 	font-weight: 600;
 	color: $white;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 span.logo_letter{
@@ -78,7 +85,7 @@ span.logo_letter{
 
 .ui.signup.button{
     font-family: 'Raleway';
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 500;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -90,17 +97,10 @@ span.logo_letter{
 	}
 }
 
-.header-image img{
-	position:absolute;
-	top:0;
-	width: 100%;
-	height: auto;
-/*	min-height: 1000px;
-*/	z-index: -1;
-}
 
 h1.ui.header{
 	padding: 6em 0em;
+	margin: 0;
 	font-size: 4rem;
 	font-family: 'Raleway';
 	font-weight: 700;
@@ -159,4 +159,16 @@ i.twitter.large.icon:hover{
 
 i.google.plus.large.icon:hover{
 	color:#DD4C3B;
+}
+
+#signup.column{
+	max-width: 450px;
+}
+
+form.ui.large.form{
+	margin-top: 100px;
+	.ui.checkbox{
+		float:left;
+		margin-bottom: 15px;
+	}
 }

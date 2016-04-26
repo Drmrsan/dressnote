@@ -10,7 +10,7 @@
 			</div>
 			<div class="right menu">
 				<div class="item">
-					<%= link_to "Login", "#", class: "ui login button" %>
+					<%= link_to "Login", new_user_session_path, class: "ui login button" %>
 				</div>
 			</div>
 		</div>
@@ -18,12 +18,11 @@
 		<h1 class="ui center aligned header">
 			Keep your contacts in one place with<br>DressNote.
 			<div class="item">
-				<%= link_to "Signup", "#", class: "ui signup button" %>
+				<%= link_to "Signup", new_user_registration_path, class: "ui signup button" %>
 			</div>
 		</h1>
 
 		<div class="header-image">
-			<%= image_tag('header-image.jpg') %>
 		</div>
 
 	</div>
@@ -66,7 +65,7 @@
 	    	</span>
 	    </div>
 	    <div class="column">
-	    	<%= link_to "Contact me", "#", class: "ui signup button" %>
+	    	<%= link_to "Contact me", "#", class: "ui login button" %>
 	    </div>
 	  </div>
 	</div>
