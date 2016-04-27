@@ -1,0 +1,52 @@
+<div id="mainHead">
+	<div id="header">
+		<div class="ui menu fixed">
+			<div class="item">
+				<%= link_to root_path do%>
+					<div class="logo">
+						<p>Dress<span class="logo_letter">N</span>ote</p>
+					</div>
+				<% end %>
+			</div>
+			<div class="right menu">
+				<% if user_signed_in? %>
+					<div class="item">
+						<%= link_to "New Contact", "#", class: "ui teal button" %>
+					</div>
+
+					<div class="item">
+						<div class="ui teal buttons">
+						  <div class="ui button"><%= current_user.email %></div>
+						  <div class="ui combo top right pointing dropdown icon button">
+						    <i class="dropdown icon"></i>
+						    <div class="menu">
+						      <div class="item"><i class="phone icon"></i><%= link_to "Contacts", user_contacts_path(current_user) %></div>
+						      <div class="item"><i class="user icon"></i>Profile</div>
+						      <div class="divider"></div>
+						      <div class="item"><i class="reply icon"></i><%= link_to "Logout", destroy_user_session_path, method: :delete %></div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				<% else %>
+					<div class="item">
+						<%= link_to "Login", new_user_session_path, class: "ui login button" %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+
+		<% if @homepage == true %>
+			<h1 class="ui center aligned header">
+				Keep your contacts in one place with<br>DressNote.
+				<div class="item">
+					<%= link_to "Signup",  new_user_registration_path, class: "ui signup button" %>
+				</div>
+			</h1>
+
+			<div class="header-image">
+			</div>
+		<% end %>
+
+	</div>
+</div>

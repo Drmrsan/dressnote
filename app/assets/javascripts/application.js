@@ -15,3 +15,14 @@
 //= require semantic-ui
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+	setTimeout(function(){
+		$('.ui.message').fadeOut("slow", function(){
+			$(this).remove;
+		})
+	},2000);
+
+	$('.ui.dropdown').dropdown();
+
+})

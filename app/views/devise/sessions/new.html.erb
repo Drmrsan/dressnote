@@ -1,10 +1,9 @@
 <div class="ui middle aligned center aligned grid">
   <div id="signup" class="column">
-    <form class="ui large form">
+    <div id="authentication_segment" class="ui large form">
       <h2 class="ui teal header">Log in</h2>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          
           <div class="ui stacked segment">
             <div class="ui field">
               <div class="ui left icon input">
@@ -33,9 +32,9 @@
           </div>
         <% end %>
 
-        <div class="ui message">
+        <div id="auth_segment" class="ui segment">
          <%= render "devise/shared/links" %>
         </div>
-      </form>
+      </div>
     </div>
   </div>

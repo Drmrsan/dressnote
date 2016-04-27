@@ -19,12 +19,12 @@
 
 $white			: #ffffff;
 $black			: #000000;
-$light_green	: #1b998b;
+$light_green	: #00b5ad;
 $coral			: #e84855;
 $dark_blue		: #23282e;
 
 html, body{
-	font-family: "Raleway", sans-serif;
+	font-family: "Raleway", sans-serif !important;
 	background-color: #dadada;
 }
 
@@ -64,12 +64,12 @@ span.logo_letter{
 	color: $light_green;
 }
 
-.ui.menu:not(.vertical) .item > .button {
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
+// .ui.menu:not(.vertical) .item > .button {
+//     padding-bottom: 0.5em;
+//     padding-top: 0.5em;
+//     font-size: 1.2rem;
+//     font-weight: 700;
+// }
 
 .ui.login.button{
 	font-family: 'Raleway';
@@ -91,6 +91,14 @@ span.logo_letter{
     padding-bottom: 1rem;
     background: $light_green;
     color: $white;
+	&:hover{
+		background: $white;
+		color: $light_green;
+	}
+}
+
+.ui.new_contact.button{
+    font-family: 'Raleway';
 	&:hover{
 		background: $white;
 		color: $light_green;
@@ -125,6 +133,11 @@ h1.ui.header{
 	h2,p{
 		color: $dark_blue;
 	}
+}
+
+#render{
+	width: 100%;
+	margin-top: 80px;
 }
 
 h2.ui.center.aligned.header{
@@ -165,10 +178,29 @@ i.google.plus.large.icon:hover{
 	max-width: 450px;
 }
 
-form.ui.large.form{
-	margin-top: 100px;
+div.ui.large.form{
+	margin-top: 80px;
 	.ui.checkbox{
 		float:left;
 		margin-bottom: 15px;
 	}
+}
+
+.debug_dump {
+	clear: both;
+	width: 100%;
+	margin-top: 45px;
+	box-sizing: border-box;
+}
+
+.ui.message {
+	position: absolute;
+    z-index: 999;
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+}
+
+#authentication_segment{
+	padding: 100px 0;
 }
