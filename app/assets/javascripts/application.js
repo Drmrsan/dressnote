@@ -11,10 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
-//= require semantic-ui
 //= require turbolinks
-//= require_tree .
 
 $(function(){
 	setTimeout(function(){

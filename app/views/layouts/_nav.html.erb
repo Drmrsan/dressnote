@@ -1,52 +1,48 @@
-<div id="mainHead">
-	<div id="header">
-		<div class="ui menu fixed">
-			<div class="item">
-				<%= link_to root_path do%>
-					<div class="logo">
-						<p>Dress<span class="logo_letter">N</span>ote</p>
-					</div>
-				<% end %>
-			</div>
-			<div class="right menu">
-				<% if user_signed_in? %>
-					<div class="item">
-						<%= link_to "New Contact", "#", class: "ui teal button" %>
-					</div>
+<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to root_path do%>
+                    <div class="navbar-brand logo">
+                        <p>Dress<span class="logo_letter">N</span>ote</p>
+                    </div>
+                <% end %>
+            </div>
 
-					<div class="item">
-						<div class="ui teal buttons">
-						  <div class="ui button"><%= current_user.email %></div>
-						  <div class="ui combo top right pointing dropdown icon button">
-						    <i class="dropdown icon"></i>
-						    <div class="menu">
-						      <div class="item"><i class="phone icon"></i><%= link_to "Contacts", user_contacts_path(current_user) %></div>
-						      <div class="item"><i class="user icon"></i>Profile</div>
-						      <div class="divider"></div>
-						      <div class="item"><i class="reply icon"></i><%= link_to "Logout", destroy_user_session_path, method: :delete %></div>
-						    </div>
-						  </div>
-						</div>
-					</div>
-				<% else %>
-					<div class="item">
-						<%= link_to "Login", new_user_session_path, class: "ui login button" %>
-					</div>
-				<% end %>
-			</div>
-		</div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <% if user_signed_in? %>
+                        
+                        <li> <%= link_to "New Contact", "#", class: "btn btn-default btn-sm" %> </li>
 
-		<% if @homepage == true %>
-			<h1 class="ui center aligned header">
-				Keep your contacts in one place with<br>DressNote.
-				<div class="item">
-					<%= link_to "Signup",  new_user_registration_path, class: "ui signup button" %>
-				</div>
-			</h1>
+                        <li class="btn-group">
+                          <button type="button" class="btn btn-default btn-sm"><%= current_user.email %></button>
+                          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><%= link_to "Contacts", user_contacts_path(current_user) %></li>
+                            <li><a href="#">Profile</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                          </ul>
+                        </li>
 
-			<div class="header-image">
-			</div>
-		<% end %>
-
-	</div>
-</div>
+                    <% else %>
+                        <li> <%= link_to "Login", new_user_session_path, class: "btn btn-default btn-sm" %> </li>
+                    <% end %>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>

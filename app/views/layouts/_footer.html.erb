@@ -1,25 +1,27 @@
-<footer class="footer">
-	<div class="ui two column centered grid">
-	  <div class="four column centered row">
-	    <div class="column">
-	    	<h2>
-	    		Like it? &nbsp; Share it!
-	    	</h2>
-	    	<span>
-	    		<%= link_to "#" do %>
-	    			<i class="facebook large icon"></i>
-	    		<% end %>
-	    		<%= link_to "#" do %>
-	    			<i class="twitter large icon"></i>
-	    		<% end %>
-	    		<%= link_to "#" do %>
-	    			<i class="google plus large icon"></i>
-	    		<% end %>
-	    	</span>
-	    </div>
-	    <div class="column">
-	    	<%= link_to "Contact me", "#", class: "ui login button" %>
-	    </div>
-	  </div>
+<footer id="footer">
+	<div class="container">
+		<div class="row vcenter">
+			<div class="col-md-6">
+				<div class="share">
+					<h5>Like it? &nbsp; Share it!</h5>
+					<span>
+			    		<%= link_to (fa_icon "facebook"), "#" %>
+			    		<%= link_to (fa_icon "twitter"), "#" %>
+			    	</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="contact-me">
+					<%= link_to "Contact me", "#", class: "btn btn-lg btn-default" %>
+				</div>
+			</div>
+		</div>
 	</div>
 </footer>
+
+
+
+	    	
+	    	
+	    	
+
