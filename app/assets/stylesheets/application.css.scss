@@ -27,7 +27,21 @@ $dark_blue		: #23282e;
 html, body{
 	font-family: "Raleway", sans-serif !important;
 	background-color: #dadada;
+<<<<<<< HEAD
 	height: 100%;
+=======
+}
+
+#header {
+	margin:0;
+	background: image-url("header-image.jpg") center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: auto;
+>>>>>>> 72c953aa41064551942595dc90c88ce90d54d2e4
 }
 
 
@@ -158,6 +172,7 @@ header .jumbotron {
 section#headline{
 	background: $coral;
 	text-align: center;
+<<<<<<< HEAD
 	padding: 20px 0;
 	&:hover{
 		background: $dark_blue;
@@ -165,6 +180,18 @@ section#headline{
 	}
 	.logo{
 		font-size: 2.2em;
+=======
+}
+
+footer.footer{
+	width:100%;
+	background: $dark_blue;
+	color: $white;
+	padding: 100px 0 100px 0;
+	h2{
+		font-family: 'Raleway';
+		font-weight: 500;
+>>>>>>> 72c953aa41064551942595dc90c88ce90d54d2e4
 	}
 }
 
