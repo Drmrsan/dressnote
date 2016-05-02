@@ -1,0 +1,40 @@
+<div class="contact-show">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-default text-center">
+				  <div class="panel-image">
+				  <% if @contact.gender_id == 1 %>
+				    <%= image_tag('avatar-male.jpg') %>
+				  <% else %>
+				   <%= image_tag('avatar-female.jpg') %>
+				  <% end %>
+				  </div>
+				  <div class="panel-footer">
+				  	<h4><%= link_to @contact.name, "#" %></h4>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-md-8">
+				<div class="panel panel-default">
+				<div class="panel-heading"><h4><%= @contact.name %> details</h4></div>
+					<ul class="list-group">
+						<li class="list-group-item">Name: <%= @contact.name %></li>
+						<li class="list-group-item">Home Number: <%= @contact.homenum %></li>
+						<li class="list-group-item">Mobile Number: <%= @contact.mobnum %></li>
+						<li class="list-group-item">Adress: <%= @contact.adress %></li>
+						<li class="list-group-item">Category: <%= @contact.category.name%></li>
+						<li class="list-group-item">Gender: <%= @contact.gender.name %></li>
+					</ul>
+					<div class="panel-footer">
+						<%= link_to "Edit", "#", class: "btn btn-sm btn-default" %>
+						<%= link_to "Delete", "#", class: "btn btn-sm btn-danger" %>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+</div>

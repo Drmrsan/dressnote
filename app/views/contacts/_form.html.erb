@@ -1,0 +1,10 @@
+<%= simple_form_for ([current_user, @contact ]) do |f| %>
+	<%= f.input :name, placeholder: "Write contact's Full Name", label: false %>
+	<%= f.input :homenum, placeholder: "Write contact's Home number", label: false %>
+	<%= f.input :mobnum, placeholder: "Write contact's Mobile number", label: false %>
+	<%= f.input :adress, placeholder: "Write contact's Adress", label: false %>
+	<%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Chose a category"}, {class: "form-control"} %><br>
+	<%= f.collection_select :gender_id, Gender.all, :id, :name, {prompt: "Gender"}, {class: "form-control"} %><br>
+	<%= f.file_field :picture, placeholder: "Upload contact's picture", label: false, class: "form-control"  %><br>
+	<%= f.button :submit %>
+<% end %>
