@@ -1,4 +1,7 @@
-<%= simple_form_for ([current_user, @contact ]) do |f| %>
+<%= simple_form_for ([current_user, @contact ]), html:{ multipart: true } do |f| %>
+	
+	<%= render 'shared/error_messages' %>
+
 	<%= f.input :name, placeholder: "Write contact's Full Name", label: false %>
 	<%= f.input :homenum, placeholder: "Write contact's Home number", label: false %>
 	<%= f.input :mobnum, placeholder: "Write contact's Mobile number", label: false %>

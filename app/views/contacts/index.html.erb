@@ -23,11 +23,15 @@
 							<div class="col-md-4">
 								<div class="panel panel-default">
 								  <div class="panel-image">
-								  <% if contact.gender_id == 1 %>
+								  		
+								  <% if contact.picture.url != "" %>
+								  	<%= image_tag(contact.picture.url) %>
+								  <% elsif contact.gender_id == 1 %>
 								    <%= image_tag('avatar-male.jpg') %>
-								  <% else %>
+								  <% elsif %>
 								   <%= image_tag('avatar-female.jpg') %>
 								  <% end %>
+								  
 								  </div>
 								  <div class="panel-footer">
 								  	<h4><%= link_to contact.name, user_contact_path(current_user, contact) %></h4>
