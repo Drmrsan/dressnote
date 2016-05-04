@@ -17,7 +17,7 @@
 
 $(function(){
 	setTimeout(function(){
-		$('.ui.message').fadeOut("slow", function(){
+		$('.alert').fadeOut("slow", function(){
 			$(this).remove;
 		})
 	},2000);

@@ -274,10 +274,13 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus{
 
 .alert {
 	position: absolute;
+    top: 80px;
     z-index: 999;
     width: 100%;
     border-radius: 0;
     text-align: center;
+    background: rgba(0,181,173, .7);
+    color: white;
 }
 
 
