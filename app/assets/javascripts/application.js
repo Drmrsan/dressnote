@@ -17,7 +17,7 @@
 
 $(function(){
 	setTimeout(function(){
-		$('.alert').fadeOut("slow", function(){
+		$('.error_messages').fadeOut("slow", function(){
 			$(this).remove;
 		})
 	},2000);

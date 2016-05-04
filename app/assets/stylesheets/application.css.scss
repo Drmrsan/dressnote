@@ -272,7 +272,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus{
 	}
 }
 
-.alert {
+.error_message {
 	position: absolute;
     top: 80px;
     z-index: 999;
@@ -281,6 +281,17 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus{
     text-align: center;
     background: rgba(0,181,173, .7);
     color: white;
+    .alert{
+    	margin-bottom: 0;
+    }
+}
+
+#error_explanation {
+	color: red;
+	ul {
+	color: red;
+	margin: 0 0 30px 0;
+	}
 }
 
 
