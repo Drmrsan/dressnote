@@ -30,3 +30,12 @@ Please feel free to use a different markup language if you do not plan to run
 <div class="ui segment">
 	<%= debug(params) if Rails.env.development? %>
 </div>
+
+
+<% if @contact.gender_id == 1 %>
+    <%= image_tag('avatar-male.jpg') %>
+  <% elsif @contact.gender_id == 2 %>
+   <%= image_tag('avatar-female.jpg') %>
+  <% else %>
+  	<%= image_tag(@contact.picture.url) %>
+  <% end %>
