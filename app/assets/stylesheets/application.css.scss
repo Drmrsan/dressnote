@@ -212,10 +212,18 @@ section#about{
 	text-align: center;
 	.about-content{
 		padding: 120px 0;
-		.panel-image img{
+		.panel-image {
+			img{
 			padding: 0;
 			width: 100%;
 			border-radius: 4px 4px 0 0 ;
+			}
+			i{
+			color: #F5F5F5;
+	    	position: absolute;
+	    	top: 8px;
+	    	right: 24px;
+			}
 		}
 	}
 }
