@@ -12,16 +12,15 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require rails.validations
+//= require rails.validations.simple_form
 //= require jquery_ujs
 //= require turbolinks
 
 $(function(){
 	setTimeout(function(){
-		$('.error_messages').fadeOut("slow", function(){
+		$('.error_message').fadeOut("slow", function(){
 			$(this).remove;
 		})
 	},2000);
-
-	$('.ui.dropdown').dropdown();
-
 })

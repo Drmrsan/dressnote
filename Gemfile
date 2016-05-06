@@ -13,11 +13,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 4.0', '>= 4.0.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.1.0'
 gem 'carrierwave',             '0.10.0'
 gem 'mini_magick',             '3.8.0'
 gem 'fog',                     '1.36.0'
+
+gem 'simple_form'
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
 
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'

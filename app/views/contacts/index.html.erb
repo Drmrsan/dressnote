@@ -24,11 +24,10 @@
 								<div class="panel panel-default">
 								  <div class="panel-image">
 								  		
-								  <% if contact.picture.url != "" %>
-								  	<%= image_tag(contact.picture.url) %>
-								  <% elsif contact.gender_id == 1 %>
+							
+								  <% if contact.gender_id == 1 %>
 								    <%= image_tag('avatar-male.jpg') %>
-								  <% elsif %>
+								  <% else %>
 								   <%= image_tag('avatar-female.jpg') %>
 								  <% end %>
 								  
