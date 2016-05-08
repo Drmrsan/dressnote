@@ -31,6 +31,10 @@ html, body{
 	height: 100%;
 }
 
+a:hover{
+	text-decoration: none;
+}
+
 .navbar-nav > li > .dropdown-menu {
 	margin-top: 3px;
 }
@@ -328,7 +332,7 @@ div#signin-form{
 }
 
 .category-filter{
-	margin-top: 20px;
+	margin-top: 60px;
 }
 
 li.list-group-item a{
@@ -345,6 +349,18 @@ li.list-group-item:first-child{
 	padding: 0;
 	width: 100%;
 	border-radius: 4px 4px 0 0 ;
+}
+
+h2.edit-contact{
+	margin-top:0;
+}
+
+.panel.show-contact{
+	margin-top: 20px;
+}
+
+.pagination{
+	margin: 0;
 }
 
 

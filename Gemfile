@@ -22,6 +22,10 @@ gem 'simple_form'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
 
+gem 'faker', '~> 1.6', '>= 1.6.3'
+gem 'will_paginate', '~> 3.1'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 

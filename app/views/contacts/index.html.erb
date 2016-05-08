@@ -2,7 +2,7 @@
 	<div class="about-content">
 		<div class="container">
 			<div class="row">
-				
+				<%= will_paginate @contacts, previous_label: "<i class='fa fa-angle-left'></i>", next_label: "<i class='fa fa-angle-right'></i>" %>
 				<div class="col-md-2">
 					<div class="category-filter">
 						<div class="panel panel-default">
@@ -15,19 +15,21 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-md-10">
-<!-- 					<h3 class="">Welcome <%= current_user.email %></h3>
- -->					<br>
+
+					<br>
 					<% @contacts.each do |contact| %>
 							<div class="col-md-4">
 								<div class="panel panel-default">
 								  <div class="panel-image">
 								  <%= link_to user_contact_path(current_user, contact), method: :delete, data:{confirm: "Are you sure you want to delete Contact?"} do %><i class="fa fa-close"></i><% end %>
-								  <% if contact.gender_id == 1 %>
+
+								  <% if contact.picture? %>
+								  	<%= image_tag(contact.picture.url) %>
+								  <% elsif contact.gender_id == 1 && contact.picture != "" %>
 								    <%= image_tag('avatar-male.jpg') %>
-								  <% else %>
-								   <%= image_tag('avatar-female.jpg') %>
+								  <% elsif contact.gender_id == 2 && contact.picture != "" %>
+									   <%= image_tag('avatar-female.jpg') %>
 								  <% end %>
 								  
 								  </div>
@@ -37,6 +39,7 @@
 								</div>
 							</div>
 					<% end %>
+					<%= will_paginate @contacts, previous_label: "<i class='fa fa-angle-left'></i>", next_label: "<i class='fa fa-angle-right'></i>" %>
 				</div>
 			</div>
 		</div>

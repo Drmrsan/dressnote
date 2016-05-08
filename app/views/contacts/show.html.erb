@@ -4,12 +4,12 @@
 			<div class="col-md-4">
 				<div class="panel panel-default text-center">
 				  <div class="panel-image">
-				  	
-				  <% if @contact.picture.url != "" %>
+				 
+				  <% if @contact.picture? %>
 				  	<%= image_tag(@contact.picture.url) %>
-				  <% elsif @contact.gender_id == 1 %>
+				  <% elsif @contact.gender_id == 1 && @contact.picture != "" %>
 				    <%= image_tag('avatar-male.jpg') %>
-				  <% elsif @contact.gender_id == 2 %>
+				  <% elsif @contact.gender_id == 2 && @contact.picture != "" %>
 					   <%= image_tag('avatar-female.jpg') %>
 				  <% end %>
 
@@ -21,7 +21,7 @@
 			</div>
 
 			<div class="col-md-8">
-				<div class="panel panel-default">
+				<div class="panel panel-default show-contact">
 				<div class="panel-heading"><h4><%= @contact.name %> details</h4></div>
 					<ul class="list-group">
 						<li class="list-group-item">Name: <%= @contact.name %></li>
@@ -32,8 +32,9 @@
 						<li class="list-group-item">Gender: <%= @contact.gender.name %></li>
 					</ul>
 					<div class="panel-footer">
-						<%= link_to "Edit", "#", class: "btn btn-sm btn-default" %>
+						<%= link_to "Edit", edit_user_contact_path, class: "btn btn-sm btn-default" %>
 						<%= link_to "Delete", user_contact_path(current_user,@contact), method: :delete, data:{confirm: "Are you sure?"}, class: "btn btn-sm btn-danger" %>
+						<%= link_to "Back to Contacts", user_contacts_path, class: "btn btn-default btn-sm" %>
 					</div>
 				</div>
 				
