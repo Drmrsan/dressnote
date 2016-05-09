@@ -8,6 +8,7 @@ class Contact < ActiveRecord::Base
 	validates_uniqueness_of :name, :mobnum
 
 	validate  :picture_size
+	
 
   private
 

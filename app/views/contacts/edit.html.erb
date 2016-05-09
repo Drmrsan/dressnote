@@ -5,11 +5,11 @@
 				<div class="panel panel-default text-center">
 				  <div class="panel-image">
 				 
-				  <%= image_tag(@contact.picture.url) if @contact.picture? %>
-
-				  <% if @contact.gender_id == 1 && @contact.picture == "" %>
+				  <% if @contact.picture? %>
+				  	<%= image_tag(@contact.picture.url) %>
+				  <% elsif @contact.gender_id == 1 && @contact.picture != "" %>
 				    <%= image_tag('avatar-male.jpg') %>
-				  <% elsif @contact.gender_id == 2 && @contact.picture == "" %>
+				  <% elsif @contact.gender_id == 2 && @contact.picture != "" %>
 					   <%= image_tag('avatar-female.jpg') %>
 				  <% end %>
 
