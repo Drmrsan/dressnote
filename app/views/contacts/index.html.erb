@@ -6,7 +6,7 @@
 					<div class="category-filter">
 						<div class="panel panel-default">
 						 <ul class="list-group">
-						 		<li class="list-group-item"><%= link_to "All", user_contacts_path %><span class="badge"><%= @all_contacts.count %></span></li>
+						 		<li class="list-group-item"><%= link_to "All", user_contacts_path %><span class="badge"><%= %></span></li>
  								<% Category.all.each do |category| %>
  									<li class="list-group-item"><%= link_to category.name, user_contacts_path(category: category.name) %><span class="badge"><%= category.contacts.count %></span></li>
  								<% end %>
@@ -15,36 +15,15 @@
 					</div>
 				</div>
 
+				<%= form_tag user_contacts_path, method: :get, id: "search-box" do %>
+					<%= text_field_tag :search, params[:search] %>
+					<%= submit_tag "Search"  %>
+				<% end %>
 				
 				<div class="col-md-10">
-					<div class="pagination_nav">
-						<%= alphabetical_paginate @alphaParams %>
+					<div id="contacts">
+						<%= render "contacts" %>
 					</div>
-					<div id="pagination_table">
-						<% @all_contacts.each do |contact| %>
-
-								<div class="col-md-4">
-									<div class="panel panel-default">
-									  <div class="panel-image">
-									  <%= link_to user_contact_path(current_user, contact), method: :delete, data:{confirm: "Are you sure you want to delete Contact?"} do %><i class="fa fa-close"></i><% end %>
-
-									  <% if contact.picture? %>
-									  	<%= image_tag(contact.picture.url) %>
-									  <% elsif contact.gender_id == 1 && contact.picture != "" %>
-									    <%= image_tag('avatar-male.jpg') %>
-									  <% elsif contact.gender_id == 2 && contact.picture != "" %>
-										   <%= image_tag('avatar-female.jpg') %>
-									  <% end %>
-									  
-									  </div>
-									  <div class="panel-footer">
-									  	<h4><%= link_to contact.name, user_contact_path(current_user, contact) %></h4>
-									  </div>
-									</div>
-								</div>
-						<% end %>
-					</div>
-
 				</div>
 			</div>
 		</div>

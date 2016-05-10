@@ -1,0 +1,22 @@
+<% @contacts.each do |contact| %>
+
+	<div class="col-md-4">
+		<div class="panel panel-default">
+		  <div class="panel-image">
+		  <%= link_to user_contact_path(current_user, contact), method: :delete, data:{confirm: "Are you sure you want to delete Contact?"} do %><i class="fa fa-close"></i><% end %>
+
+		  <% if contact.picture? %>
+		  	<%= image_tag(contact.picture.url) %>
+		  <% elsif contact.gender_id == 1 && contact.picture != "" %>
+		    <%= image_tag('avatar-male.jpg') %>
+		  <% elsif contact.gender_id == 2 && contact.picture != "" %>
+			   <%= image_tag('avatar-female.jpg') %>
+		  <% end %>
+		  
+		  </div>
+		  <div class="panel-footer">
+		  	<h4><%= link_to contact.name, user_contact_path(current_user, contact) %></h4>
+		  </div>
+		</div>
+	</div>
+<% end %>

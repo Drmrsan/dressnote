@@ -23,4 +23,10 @@ $(function(){
 			$(this).remove;
 		})
 	},2000);
+
+	$("#search-box").keyup(function() {
+    $.get($("#search-box").attr("action"), $("#search-box").serialize(), null, "script");
+    return false;
+  });
+
 })
