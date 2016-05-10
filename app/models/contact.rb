@@ -9,6 +9,7 @@ class Contact < ActiveRecord::Base
 
 	validate  :picture_size
 	
+
 	def self.search(search)
 		if search
 			where("name LIKE ?","%#{search}%")

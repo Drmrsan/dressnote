@@ -2,13 +2,14 @@ class ContactsController < ApplicationController
 	before_action :find_contact, only: [:show, :edit, :update, :destroy]
 	def index
 		# @all_contacts, @alphaParams = Contact.all.alpha_paginate(params[:letter], {:bootstrap3 => "true"}){|contact| contact.name }
+		@contacts = Contact.all.paginate(page: params[:page], per_page: 6).search(params[:search])
 
-        if params[:category].blank?
-            @contacts = Contact.all.search(params[:search])
-        else
-            @category_id = Category.find_by(name: params[:category]).id
-            @contacts = Contact.where(category_id: @category_id).order("created_at DESC")
-        end
+        # if params[:category].blank?
+        #     @contacts = Contact.all.search(params[:search])
+        # else
+        #     @category_id = Category.find_by(name: params[:category]).id
+        #     @contacts = Contact.where(category_id: @category_id).search(params[:search])
+        # end
 	end
 
 	def new
