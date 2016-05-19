@@ -30,6 +30,7 @@ gem 'alphabetical_paginate'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem 'omniauth-google_oauth2'
 
 group :development, :test do
   gem 'byebug'
