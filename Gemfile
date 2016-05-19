@@ -27,6 +27,7 @@ gem 'will_paginate', '~> 3.1'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'alphabetical_paginate'
 
+gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 

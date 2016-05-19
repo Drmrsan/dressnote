@@ -3,7 +3,9 @@
 Devise.setup do |config|
   
   # Add a OmniAuth providers.
-
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
+  
+  config.omniauth :google_oauth2, "641399269145-ghbgqntoa0voj7qsp5r5noq3c0ukt726.apps.googleusercontent.com", "c55CXXsWVn0ZoWbvwmG8kFwt"
   
   
   # The secret key used by Devise. Devise uses this key to generate
