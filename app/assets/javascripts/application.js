@@ -25,8 +25,19 @@ $(function(){
 	},2000);
 
 	$("#search-box").keyup(function() {
-    $.get($("#search-box").attr("action"), $("#search-box").serialize(), null, "script").fadeIn();
-    return false;
-  });
+	    $.get($("#search-box").attr("action"), $("#search-box").serialize(), null, "script");
+     	return false;
+
+  	});
+  
+  //$("#search-box").submit(function(){
+  //   var queryString = $(this).serialize(); //gets the values in your form
+  //   var url = $(this).attr("action"); //your action url
+  //   $("#contacts").load(url+"?"+queryString).fadeIn('slow');
+  //   return false; //this prevents your form from doing its default behavior.
+ 	// });
+  
 
 })
+
+
